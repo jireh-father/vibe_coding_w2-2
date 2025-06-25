@@ -24,10 +24,11 @@ app.include_router(chat.router)
 @app.get("/")
 async def root():
     """루트 엔드포인트"""
-    return {"message": "Chat API Server"}
+    # 의도적인 버그 1: 문법 오류 (닫히지 않은 괄호)
+    return {"message": "Chat API Server", "status": "running"
 
 
 @app.get("/health")
 async def health_check():
     """헬스체크 엔드포인트"""
-    return {"status": "healthy"} 
+    return {"status": undefined_variable} 

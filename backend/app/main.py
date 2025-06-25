@@ -4,8 +4,8 @@ from app.routers import chat
 
 app = FastAPI(
     title="Chat API",
-    description="간단한 채팅 API 서버",
-    version="1.0.0"
+    description="간단한 채팅 API 서버 - PR 테스트용 수정",
+    version="1.0.1"
 )
 
 # CORS 설정
@@ -24,7 +24,7 @@ app.include_router(chat.router)
 @app.get("/")
 async def root():
     """루트 엔드포인트"""
-    return {"message": "Chat API Server"}
+    return {"message": "Chat API Server", "test": "PR 테스트 완료!"}
 
 
 @app.get("/health")
